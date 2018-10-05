@@ -1,8 +1,8 @@
 // Step 3: Javascript warmup part two
-const timeSetup = {
-  time:12,
-}
 function objSetup(){
+  const timeSetup = {
+    time:12,
+  }
   return timeSetup;
 }
 let timeObject = objSetup(timeSetup);
