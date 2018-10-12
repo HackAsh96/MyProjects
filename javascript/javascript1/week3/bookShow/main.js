@@ -67,7 +67,7 @@ function books() {
   for(i=0;i<myArray.length;i++){
     const li = document.createElement('li');
     ul.appendChild(li);
-    li.innerHTML=li.innerHTML + booksDetails.id[5];
+    li.innerHTML=li.innerHTML + myArray[i];
   }
   document.getElementById('myBook').appendChild(ul);
 }
