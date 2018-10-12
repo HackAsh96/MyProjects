@@ -1,8 +1,8 @@
 // Step 3: Javascript warmup part two
+const timeSetup = {
+  time:12,
+}
 function objSetup(){
-  const timeSetup = {
-    time:12,
-  }
   return timeSetup;
 }
 let timeObject = objSetup(timeSetup);
@@ -51,8 +51,8 @@ console.log(notes);
 // Get a note
 function getNoteFromId(id){
   for(i=0;i<notes.length;i++){
-    if(id==notes[i].noteId){
-      console.log(notes[i].note);
+    if(id==notes[i-1].noteId){
+      console.log(notes[i-1].note);
       break;
     }
     else {
@@ -60,7 +60,7 @@ function getNoteFromId(id){
     }
   }
 }
-getNoteFromId(4);
+getNoteFromId(3);
 // Read all notes
 function showAllNotes(){
   for(i=0;i<notes.length;i++){
