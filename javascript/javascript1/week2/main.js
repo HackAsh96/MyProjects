@@ -37,7 +37,7 @@ for (i=0;i<daysLeft;i++){
   }
 }
 //Step 3: Smart-ease - Goes Global!
-// Save a note
+// Save notes
 const notes = [];
 function addNote(note,noteId){
   notes.push({note,noteId});
