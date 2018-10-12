@@ -69,6 +69,6 @@ function books() {
     ul.appendChild(li);
     li.innerHTML=li.innerHTML + booksDetails.id[5];
   }
-  document.getElementById('myBooks').appendChild(ul);
+  document.getElementById('myBook').appendChild(ul);
 }
 books();
