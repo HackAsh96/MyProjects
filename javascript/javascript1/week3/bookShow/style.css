@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Gloria+Hallelujah');
+*{
+	margin:0;
+    padding:0;
+}
 body{
-  margin: 0;
-  padding: 0;
+    background:#C2EEE4;
 }
 #myBooks{
   margin: 0;
@@ -13,38 +16,63 @@ body{
 }
 h1{
   text-align: center;
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   font-weight: bolder;
-  background-color: #555;
   color: white;
+  font-size: 40px;
+  text-shadow:15px 5px 10px #166C60;
 }
 h2 {
-  color: blue;
-  font-size: 25px;
+  color: #007464;
+  font-size: 35px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+h6{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+  color: white;
+  font-size: 17px;
+  padding: 10px;
+  text-shadow:15px 5px 10px #166C60;
 }
 li{
   list-style-type: none;
-  width: 200px;
+  width: 300px;;
+  flex-direction:row;
+  box-sizing:border-box;
+  background-color: #94CFC7;
+  border: 2px inset #166C60;
 }
 ul{
-  margin: 0;
-  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
 }
 p{
   font-weight: bold;
-  font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+  color: #00A48D;
 }
 .title{
-  text-align: center;
-  position: absolute;
-  top: 40px;
-  width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    background:rgb(218, 129, 27);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #69CCBE;
 }
 img{
   width: 120px;
   height: 150px;
+  padding: 10px;
+}
+img:hover{
+  transform: scale(1.1);
+
 }
