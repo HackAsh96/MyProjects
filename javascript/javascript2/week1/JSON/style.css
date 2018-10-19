@@ -12,8 +12,13 @@ h1{
   letter-spacing: 6px;
   font-size: 40px;
   color:#fff;
-
-
+}
+img{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top:5px;
+  left:20px;
 }
 #list_conteiner{
   background-color: #FF9C14;
