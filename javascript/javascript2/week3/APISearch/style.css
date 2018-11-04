@@ -159,7 +159,9 @@ body{
     width: 400px;
   }
 }
-@media only screen and (min-width:768px){
+@media only screen
+and (min-width:375px)
+and (max-width:980px){
   body{
     margin: 0;
     padding: 0;
@@ -182,7 +184,7 @@ body{
   }
   .text1{
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
@@ -191,7 +193,7 @@ body{
     animation: text 3s 1;
   }
   .text2{
-    font-size: 30px;
+    font-size: 37px;
     color: #DAE7E8;
   }
 
@@ -201,7 +203,7 @@ body{
       margin-bottom: -40px;
     }
     30%{
-      letter-spacing: 25px;
+      letter-spacing: 20px;
       margin-bottom: -40px;
     }
     85%{
@@ -212,7 +214,7 @@ body{
 
   #search-box{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #66C1D6;
@@ -251,6 +253,11 @@ body{
     animation: mymove 3s ;
     width: 400px;
   }
+  #search-txt::placeholder{
+    color:#000;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+  }
   @keyframes mymove {
     0%{
       width: 0px;
@@ -264,7 +271,7 @@ body{
   }
   #search-box1{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: #66C1D6;
@@ -302,6 +309,11 @@ body{
     line-height: 40px;
     animation: mymove1 3s ;
     width: 400px;
+  }
+  #search-txt1::placeholder{
+    color:#000;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
   }
   @keyframes mymove1 {
     0%{
