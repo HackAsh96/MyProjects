@@ -7,7 +7,8 @@
 body{
   margin: 0;
   padding: 0;
-  background-image: url("https://i.pinimg.com/originals/87/22/19/872219e39469e56ff5742581122212bf.jpg");
+  /* background-image: url("https://i.pinimg.com/originals/87/22/19/872219e39469e56ff5742581122212bf.jpg"); */
+background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Nature-Full-HD-Wallpaper-Background-PIC-WPD0012064.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -25,23 +26,24 @@ body{
   display: block;
 }
 .text1{
-  color: white;
+  color: #48360C;
   font-size: 60px;
   font-weight: 700;
   letter-spacing: 8px;
   margin-bottom: 20px;
-  background: #66C1D6;
+  background: #098035;
   position: relative;
   animation: text 3s 1;
 }
 .text2{
   font-size: 30px;
+  font-weight: bolder;
   color: #014555;
 }
 
 @keyframes text {
   0%{
-    color: #66C1D6;
+    color: #944C00;
     margin-bottom: -40px;
   }
   30%{
@@ -57,7 +59,7 @@ body{
 
 #search-box{
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   background: #2f3640;
@@ -109,7 +111,7 @@ body{
 }
 #search-box1{
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%,-50%);
   background: #2f3640;
@@ -165,7 +167,7 @@ and (max-width:980px){
   body{
     margin: 0;
     padding: 0;
-    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3b/47/95/3b4795b549540638337ab1c6a8435d23.jpg");
+    background-image: url("https://cm1.narvii.com/6938/bfca690d0615cab62ecb2aacef9674739667a7fa_375.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -188,13 +190,13 @@ and (max-width:980px){
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: #66C1D6;
+    background: #525469;
     position: relative;
     animation: text 3s 1;
   }
   .text2{
     font-size: 37px;
-    color: #DAE7E8;
+    color: #525469;
   }
 
   @keyframes text {
@@ -217,7 +219,7 @@ and (max-width:980px){
     top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #66C1D6;
+    background: #525469;
     height: 40px;
     border-radius: 40px;
     padding: 10px;
@@ -229,12 +231,12 @@ and (max-width:980px){
     cursor: pointer;
   }
   #search-btn{
-    color: #103250;
+    color: #D6D7E0;
     float: right;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #66C1D6;
+    background: #525469;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,7 +256,7 @@ and (max-width:980px){
     width: 400px;
   }
   #search-txt::placeholder{
-    color:#000;
+    color:#D6D7E0;
     font-weight: bolder;
     font-family: 'Quicksand', sans-serif;
   }
@@ -274,7 +276,7 @@ and (max-width:980px){
     top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #66C1D6;
+    background: #525469;
     height: 40px;
     border-radius: 40px;
     padding: 10px;
@@ -286,12 +288,12 @@ and (max-width:980px){
     cursor: pointer;
   }
   #search-btn1{
-    color: #103250;
+    color: #D6D7E0;
     float: right;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #66C1D6;
+    background: #525469;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,7 +313,7 @@ and (max-width:980px){
     width: 400px;
   }
   #search-txt1::placeholder{
-    color:#000;
+    color:#D6D7E0;
     font-weight: bolder;
     font-family: 'Quicksand', sans-serif;
   }
