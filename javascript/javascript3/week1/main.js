@@ -30,6 +30,14 @@ function fetchMovies(){
 
 fetchMovies()
 .then((movies)=>{
+//------------function call-----------
+getAvarageRating();
+getMovieYears();
+getWordCount();
+
+//-----------------------------------
+
+function getAvarageRating(){
   const tagsMovies= movies.map((movie)=>{
     let newMovie = Object.assign({},movie,{tag:""});
     if(movie.rating>=7) newMovie.tag = "Good";
@@ -38,20 +46,22 @@ fetchMovies()
     return newMovie;
   })
   console.log(tagsMovies);
-
   const ratingSum = movies.reduce(ratingReducerSum,0)
-
   function ratingReducerSum(accumulator,movie){
     accumulator=accumulator + movie.rating;
     return accumulator;
   }
   const avarageRating = Math.floor(ratingSum/movies.length);
   console.log(avarageRating);
+  rateMovies(tagsMovies);
+}
+
+
+function rateMovies(tags){
   let goodTags=0;
   let avarageTags=0;
   let badTags=0;
-
-  tagsMovies.forEach((movie)=>{
+  tags.forEach((movie)=>{
     if(movie.tag=="Good") {
       goodTags++;
     }
@@ -65,37 +75,50 @@ fetchMovies()
   console.log("Good movies "+goodTags);
   console.log("Avarage movies "+avarageTags);
   console.log("Bad movies "+badTags);
+}
 
-  let dogCount = 0;
-  let theCount = 0;
-  let whoCount = 0;
-  let isCount = 0;
-  let notCount = 0;
-  let aCount = 0;
-  let manCount = 0;
-  movies.map((movie)=>{
-    movie.title.split(" ")
-               .filter((key)=>{
-                 if(key.toLowerCase()==="dog") dogCount++;
-                 if(key.toLowerCase()==="the") theCount++;
-                 if(key.toLowerCase()==="who") whoCount++;
-                 if(key.toLowerCase()==="is")  isCount++;
-                 if(key.toLowerCase()==="not") notCount++;
-                 if(key.toLowerCase()==="a")   aCount++;
-                 if(key.toLowerCase()==="man") manCount++;
-               })
-  })
-  console.log("'Dog' key: "+dogCount+"\n"+
-              "'The' key: "+theCount+"\n"+
-              "'Who' key: "+whoCount+"\n"+
-              "'Is'  key: "+isCount +"\n"+
-              "'Not' key: "+notCount+"\n"+
-              "'A'   key: "+aCount  +"\n"+
-              "'Man' key: "+manCount+"\n");
 
+// function getWordCount(){
+// movies.forEach((movie)=>{
+//   if(movie.title.indexOf("dog")) console.log("hello")
+//   else console.log("no");
+// })
+//
+// }
+
+
+function getMovieYears(){
 let movieYears=movies.filter((movie)=>{
   if(movie.year>=1980 && movie.year<=1989)
   return true;
 })
 console.log(movieYears);
+}
 })
+
+// let dogCount = 0;
+// let theCount = 0;
+// let whoCount = 0;
+// let isCount = 0;
+// let notCount = 0;
+// let aCount = 0;
+// let manCount = 0;
+// movies.map((movie)=>{
+  //   movie.title.split(" ")
+  //              .filter((key)=>{
+    //                if(key.toLowerCase()==="dog") dogCount++;
+    //                if(key.toLowerCase()==="the") theCount++;
+    //                if(key.toLowerCase()==="who") whoCount++;
+    //                if(key.toLowerCase()==="is")  isCount++;
+    //                if(key.toLowerCase()==="not") notCount++;
+    //                if(key.toLowerCase()==="a")   aCount++;
+    //                if(key.toLowerCase()==="man") manCount++;
+    //              })
+    // })
+    // console.log("'Dog' key: "+dogCount+"\n"+
+    //             "'The' key: "+theCount+"\n"+
+    //             "'Who' key: "+whoCount+"\n"+
+    //             "'Is'  key: "+isCount +"\n"+
+    //             "'Not' key: "+notCount+"\n"+
+    //             "'A'   key: "+aCount  +"\n"+
+    //             "'Man' key: "+manCount+"\n");
