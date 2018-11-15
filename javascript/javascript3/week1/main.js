@@ -30,10 +30,10 @@ function fetchMovies(){
 
 fetchMovies()
 .then((movies)=>{
-//------------function call-----------
+//------------functions call-----------
 getAvarageRating();
 getMovieYears();
-getWordCount();
+getWordCount("a");//change the word that you want to look over  
 
 //-----------------------------------
 
@@ -78,13 +78,16 @@ function rateMovies(tags){
 }
 
 
-// function getWordCount(){
-// movies.forEach((movie)=>{
-//   if(movie.title.indexOf("dog")) console.log("hello")
-//   else console.log("no");
-// })
-//
-// }
+function getWordCount(word){
+  let wordArr = [];
+ movies.forEach((movie)=>{
+let searchWord = word.toLowerCase();
+const myWord = movie.title.indexOf(searchWord);
+if(myWord>=0) wordArr.push(movie.title);
+})
+
+console.log(wordArr);
+}
 
 
 function getMovieYears(){
