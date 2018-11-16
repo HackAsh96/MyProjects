@@ -33,7 +33,7 @@ fetchMovies()
 //------------functions call-----------
 getAvarageRating();
 getMovieYears();
-getWordCount("a");//change the word that you want to look over  
+getWordCount("a"); //change the word that you want to look over  
 
 //-----------------------------------
 
