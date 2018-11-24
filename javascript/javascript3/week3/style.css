@@ -64,6 +64,6 @@ th, td, tr{
   #cart{
     width: 325px;
     position: absolute;
-    top: 65%;
+    top: 100%;
   }
   }
