@@ -55,15 +55,15 @@ th, td, tr{
   #frm{
     width: 325px;
     position: absolute;
-    top: 15%;
+    top: 25%;
   }
   #reciept{
     position: absolute;
-    top: 45%;
+    top: 55%;
   }
   #cart{
     width: 325px;
     position: absolute;
-    top: 50%;
+    top: 65%;
   }
   }
