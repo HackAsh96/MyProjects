@@ -52,27 +52,51 @@ function createShoppingCart(products) {
       // Implement functionality here
       return fetch("https://jsonplaceholder.typicode.com/users/1")
       .then(resp=>resp.json())
-      .then((user)=>{console.log(user);})
+      .then((user)=>{
+        if(total==0)alert("Welcome, add something to your cart 🛒");
+        else{
+          cartData+= "<tr><td></td><td></td><td></td><td>" + total +
+          "</td></tr>";
+          document.getElementById("cart").innerHTML= cartData;
+          setTimeout(()=>{alert("The total is "+total)},1000);
+          alert("Thank you "+user.name+" for your shopping\nSee you soon");
+          setTimeout(reset,1000);
+        }
+
+      })
     }
   }
 }
-const inames=[];
-const iquantity=[];
-const iprice=[];
+let inames=[];
+let iquantity=[];
+let iprice=[];
+let total=0;
+let cartData="";
 function displayCart(){
-  let cartData="<table><tr><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>";
-  let total=0;
+  cartData="<table><tr><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>";
+  total=0;
   for(let i=0;i<inames.length;i++){
     total+=iquantity[i] * iprice[i];
+    productName=inames[i];
     cartData+= "<tr><td>" + inames[i] + "</td><td>" +
     iquantity[i] + "</td><td>" + iprice[i] +
     "</td><td>" + iquantity[i]*iprice[i] +
     "</td><td><button onclick='delElement(" + i + ")'>Delete</button></td></tr>";
   }
-  cartData+= "<tr><td></td><td></td><td></td><td>" + total +
-  "</td></tr>";
   document.getElementById("cart").innerHTML= cartData;
 }
+function reset(){
+
+  document.getElementById("cart").innerHTML= "";
+  total=0;
+  document.getElementById("pname").value="";
+  document.getElementById("pqty").value="";
+  document.getElementById("price").value="";
+  inames=[];
+  iquantity=[];
+  iprice=[];
+}
+
 function delElement(a){
   inames.splice(a,1);
   iquantity.splice(a,1);
@@ -92,4 +116,5 @@ shoppingCart.addProduct(fridge);
 shoppingCart.addProduct(pasta);
 shoppingCart.addProduct(phone);
 shoppingCart.addProduct(computer);
+
 console.log(shoppingCart.getProducts());
