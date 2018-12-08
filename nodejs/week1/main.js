@@ -23,14 +23,17 @@ class Person {
       document.querySelector(".noDrill").style.display="none";
   }
   else {
-    alert(`No phone number detected`);
+    alert(`The number is not correct`);
+    window.location.reload(true);
   }
   }
   birthday(){
     alert(`${this.name} I whish you a happy ${this.age}th birthday!`);
   }
 };
-function noContact(){alert("Fill the fileds and add the contact");}
+function noContact(){
+  alert("Add the contact first");
+}
 
 function addContact(){
   const userName = document.querySelector("#user").value;
@@ -40,7 +43,8 @@ function addContact(){
   document.querySelector("#call").setAttribute("onclick","");
   document.querySelector("#call").addEventListener("click",()=>{
   if(userContact==""){
-    alert("Add number on the spot");
+    alert("No number on the spot");
+    window.location.reload(true);
   }
   else{
   user.addPhone(userContact);
