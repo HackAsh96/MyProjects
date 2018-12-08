@@ -28,6 +28,7 @@ class Person {
   }
   }
   birthday(){
+
     alert(`Yuuppyy 😍 ${this.name} I whish you a happy ${this.age}th birthday!\nPress OK to continue`);
   }
 };
@@ -37,8 +38,8 @@ function noContact(){
 
 function addContact(){
   const userName = document.querySelector("#user").value;
-  const userAge = Number(document.querySelector("#age").value);
-  const userContact = Number(document.querySelector("#phone").value);
+  const userAge = document.querySelector("#age").value;
+  const userContact = document.querySelector("#phone").value;
   if(userName==""&&userAge==""&&userContact==""){
     alert("There is no contact to add ❌");
   }
