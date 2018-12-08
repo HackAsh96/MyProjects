@@ -39,9 +39,14 @@ function addContact(){
   const userName = document.querySelector("#user").value;
   const userAge = Number(document.querySelector("#age").value);
   const userContact = Number(document.querySelector("#phone").value);
+  if(userName==""&&userAge==""&&userContact==""){
+    alert("There is no contact to add ❌");
+  }
+  else{
   let user=new Person(userName, userAge);
-  if(userAge==""&&userName==""){
-    alert("You cannot add ANYTHING ❌");
+  if(userAge==""&&userName==""&&userContact){alert("Added successfully")}
+  else if(userAge==""&&userName==""){
+    alert("Fill something ✏");
   }
   else if(userAge==""){
     alert("I don't know your age 🤷‍?!!");
@@ -49,7 +54,10 @@ function addContact(){
   else if(userName==""){
     alert("I don't know your name 🤷‍?!!");
   }
-  else {user.birthday();}
+  else {
+    alert("Added successfully");
+    user.birthday();
+  }
   document.querySelector("#call").setAttribute("onclick","");
   document.querySelector("#call").addEventListener("click",()=>{
   if(userContact==""){
@@ -61,4 +69,5 @@ function addContact(){
   user.call();
 }
 });
+}
 }
