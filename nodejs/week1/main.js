@@ -28,7 +28,7 @@ class Person {
   }
   }
   birthday(){
-    alert(`${this.name} I whish you a happy ${this.age}th birthday!`);
+    alert(`Yuuppyy 😍 ${this.name} I whish you a happy ${this.age}th birthday!\nPress OK to continue`);
   }
 };
 function noContact(){
@@ -40,6 +40,16 @@ function addContact(){
   const userAge = Number(document.querySelector("#age").value);
   const userContact = Number(document.querySelector("#phone").value);
   let user=new Person(userName, userAge);
+  if(userAge==""&&userName==""){
+    alert("You cannot add ANYTHING ❌");
+  }
+  else if(userAge==""){
+    alert("I don't know your age 🤷‍?!!");
+  }
+  else if(userName==""){
+    alert("I don't know your name 🤷‍?!!");
+  }
+  else {user.birthday();}
   document.querySelector("#call").setAttribute("onclick","");
   document.querySelector("#call").addEventListener("click",()=>{
   if(userContact==""){
