@@ -46,15 +46,8 @@ function addContact(){
   else{
   let user=new Person(userName, userAge);
   if(userAge==""&&userName==""&&userContact){alert("Added successfully")}
-  else if(userAge==""&&userName==""){
-    alert("Fill something ✏");
-  }
-  else if(userAge==""){
-    alert("I don't know your age 🤷‍?!!");
-  }
-  else if(userName==""){
-    alert("I don't know your name 🤷‍?!!");
-  }
+  else if(userAge==""){alert("I don't know your age 🤷‍?!!")}
+  else if(userName==""){alert("I don't know your name 🤷‍?!!")}
   else {
     alert("Added successfully");
     user.birthday();
